@@ -43,12 +43,12 @@ curl "localhost:8000/api/auth/me" \
   -H "Authorization: yourJwtToken"
 ```
 
-InternshipProject uses API keys to allow access to the API. You can register a new IP API key by send a request to our [register url](localhost:8000/api/auth/register).
+InternshipProject uses API keys to allow access to the API. You can register a new IP API key by send a request to our [register url](localhost:8000/api/auth/register).  also if you have already registered, use our [login url](localhost:8000/api/auth/login) for get a new JWT token.
 
 IP expects for the API jwt token to be included in all API requests to the server in a header that looks like the following:
 
 `Authorization: Bearer yourJwtToken`
 
 <aside class="notice">
-You must send your data like: <code>email, password, password_confirmation, and name</code> with your request in body section of your request.
+for get a new JWT token You must send these data: <code>email, password, password_confirmation and name</code> (in register url) and these data: <code>email, password</code> (for login) with your request in body section.
 </aside>
